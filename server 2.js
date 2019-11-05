@@ -22,6 +22,14 @@ var routes = require("./controllers/burgerController.js");
 
 app.use(routes);
 
+// mongoose.connect (
+//   provcess.env.MONGODB_URI||
+// "mongodb://<user1>:<password1>@ds141228.mlab.com:41228/heroku_hrsr91pl"
+// {
+//   useMongoClient:true
+// }
+// );
+
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
   // Log (server-side) when our server has started
