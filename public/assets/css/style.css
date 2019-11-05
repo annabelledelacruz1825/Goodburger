@@ -1,19 +1,29 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+  
+body {
+  background: plum;
+  margin: 10px;
 }
 
-.label {
-  font-weight: bold;
+#coolburger {
+  float: right;
+  margin-top: -25px;
+  width: 35%;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+td {
+  border: black 1px solid;
 }
 
-.form-group {
-  margin-bottom: 5px;
+#tables {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#uneaten, #eaten {
+  padding: 20px;
+}
+
+button {
+  border-radius: 2px;
 }

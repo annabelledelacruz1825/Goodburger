@@ -1,42 +1,63 @@
-<div class="row">
-  <center>
-
-    <div class="col-md-4">
-      <h3 class="submitFont">Burgers Available</h3>
-      <div id="burgersAvailable">
-
-        {{#each burgers}}
-          {{#unless ate}}
-          <form action="burger/eat/{{id}}" method="POST">
-            <div class="input-group">
-              <li class="form-control">{{id}}. {{burger_name}}</li>
-                <span class="input-group-btn">
-                  <button class="btn btn-success ate-button" type="submit">Eat It!</button>
-                </span>
-            </div>
-          </form>
-          {{/unless}}
-        {{/each}}
-
-      </div>
-    </div>
-
-    <div class="col-md-4"></div> 
-
-    <div class="col-md-4">
-      <h3 class="submitFont">Burgers ate </h3>
-      <div id="alreadyEaten">
-
-
-        {{#each burgers}}
-          {{#if this.ate}
-            <div class="input-group">
-              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
-            </div>
-          {{/if}}
-        {{/each}}
-
-      </div>
-    </div>
-  </center>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+     <img src="http://66.media.tumblr.com/tumblr_m8q0lce8wB1qadtd9o1_500.png" id="coolburger">
+    <h1 class="display-4">Eat-Da-Burger</h1>
+   
+    <p class="lead">... and enjoy</p>
+    
+  </div>
 </div>
+
+<!-- Pass in data from server.js -->
+<div id="tables">
+  <div id="uneaten">
+
+<table id="table1">
+  <tr>
+    <th>Burgers ready to eat!</th>
+  </tr>
+  {{#each burgers}}
+  {{#unless devoured}}
+ 
+  <tr>
+    <td>{{this.goodburger_name}}
+      <button data-id="{{this.id}}" class="devour">Devour</button>
+    </td>
+  </tr>
+  {{/unless}}
+  {{/each}}
+</table>
+</div>
+<div id="eaten">
+
+<table id="table2">
+  <tr>
+    <th>Burgers you enjoyed</th>
+  </tr>
+  {{#each burgers}}
+  {{#if devoured}}
+  
+  <tr>
+    <td>{{this.goodburger_name}}
+      <button data-id="{{this.id}}" class="delete">Delete</button>
+    </td>
+  </tr>
+  {{/if}}
+  {{/each}}
+</table>
+</div>
+</div>
+  <h2>Don't like my burgers?</h2>
+  <h3>Add your own</h3>
+
+  <form class="create-form">
+
+
+    <div class="form-group">
+      <label for="name"> click Add Burger</label>
+      <br>
+      <textarea id="name" name="name" rows="8" cols="40"></textarea>
+    </div>
+
+    <button type="submit" id="submit-btn">Add Burger</button>
+  </form>
