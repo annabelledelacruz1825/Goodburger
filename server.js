@@ -1,9 +1,10 @@
+require("dotenv").config();
 var express = require("express");
 
-var PORT = process.env.PORT || 8889;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
-var mongoose = require("mongoose");
+// var mongoose = require("mongoose");
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -24,14 +25,14 @@ var routes = require("./controllers/burgerController.js");
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb://<user1>:<password1>@ds141228.mlab.com:41228/heroku_hrsr91pl",
-  // Desolate-reaches-08837
-  {
-    useMongoClient: true
-  }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI ||
+//     "mongodb://<user1>:<password1>@ds141228.mlab.com:41228/heroku_hrsr91pl",
+//   // Desolate-reaches-08837
+//   {
+//     useMongoClient: true
+//   }
+// );
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
