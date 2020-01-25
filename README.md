@@ -12,3 +12,10 @@ CSS (SASS)	Express
 Javascript (jQuery)	jawsDB (Sequelize)
 Bootstrap	Heroku
 Handlebars (Templating Engine)	
+
+
+Instructions
+Type a burger name into the app and add it.
+Burger will be added to the "Burgers Available to Eat" section of the page.
+Select a burger you would like to Devour from the "Burgers Available to Eat List".
+Burger will be moved to the "Burgers That Have Been Devoured" section of the page.
