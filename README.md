@@ -14,8 +14,22 @@ Bootstrap	Heroku
 Handlebars (Templating Engine)	
 
 
+Installation
+To run the application locally, first clone this repository with the following command.
+
+git clone git@github.com: annabelledelacruz1825/goodburger.git
+Next, install the application dependencies.
+
+cd eat-da-burger
+npm install
+Finally, run the node server locally.
+
+node server
+Now, open the local application on port 3000 at the URL: http://localhost:3000/.
 Instructions
 Type a burger name into the app and add it.
 Burger will be added to the "Burgers Available to Eat" section of the page.
 Select a burger you would like to Devour from the "Burgers Available to Eat List".
 Burger will be moved to the "Burgers That Have Been Devoured" section of the page
+
+
