@@ -17,7 +17,6 @@ Handlebars (Templating Engine)
 Installation
 To run the application locally, first clone this repository with the following command.
 
-git clone git@github.com: annabelledelacruz1825/goodburger.git
 Next, install the application dependencies.
 
 cd eat-da-burger
